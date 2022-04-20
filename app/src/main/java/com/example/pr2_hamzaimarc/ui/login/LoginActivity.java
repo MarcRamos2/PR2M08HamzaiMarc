@@ -5,6 +5,7 @@ import android.app.Activity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -22,6 +23,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.pr2_hamzaimarc.NavigationDrawerActivity;
 import com.example.pr2_hamzaimarc.R;
 import com.example.pr2_hamzaimarc.ui.login.LoginViewModel;
 import com.example.pr2_hamzaimarc.ui.login.LoginViewModelFactory;
@@ -117,9 +119,23 @@ public class LoginActivity extends AppCompatActivity {
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                loadingProgressBar.setVisibility(View.VISIBLE);
+               /* loadingProgressBar.setVisibility(View.VISIBLE);
                 loginViewModel.login(usernameEditText.getText().toString(),
-                        passwordEditText.getText().toString());
+                        passwordEditText.getText().toString());*/
+
+                String user = ((EditText)findViewById(R.id.username)).getText().toString();
+                String password = ((EditText)findViewById(R.id.password)).getText().toString();
+
+
+                if(user.length() >= 5 && password.length() >= 5){
+                    Intent View = new Intent(LoginActivity.this,NavigationDrawerActivity.class);
+                    View.putExtra("userPutExtra", user);
+                    startActivity(View);
+                }else{
+                    Toast.makeText(getApplicationContext(),"Incorrect user or password", Toast.LENGTH_SHORT).show();
+
+                }
+
             }
         });
     }
