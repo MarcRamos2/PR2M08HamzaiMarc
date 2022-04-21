@@ -2,6 +2,8 @@ package com.example.pr2_hamzaimarc.ui.gallery;
 
 import android.os.Bundle;
 
+import android.os.Bundle;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,9 +42,28 @@ public class GalleryFragment extends Fragment {
 
     }
 
-    
+    @Override
+    /*public void onCreate(Bundle savedInstanceState) {
+        // TODO Auto-generated method stub
+        super.onCreate(savedInstanceState);
+
+        // Establecemos el Adapter a la Lista del Fragment
+        setListAdapter(new ArrayAdapter<String>(getActivity(),
+                android.R.layout.simple_list_item_1, sistemas));
+    }
 
     @Override
+    public void onListItemClick(ListView l, View v, int position, long id) {
+        // TODO Auto-generated method stub
+        super.onListItemClick(l, v, position, id);
+
+        // Mostramos un mensaje con el elemento pulsado
+        Toast.makeText(getActivity(), "Ha pulsado " + sistemas[position],
+                Toast.LENGTH_SHORT).show();
+    }*/
+
+
+    //@Override
     public void onDestroyView() {
         super.onDestroyView();
         binding = null;
