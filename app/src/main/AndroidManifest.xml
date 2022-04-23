@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PR2_HamzaiMarc">
         <activity
+            android:name=".SettingsActivity1"
+            android:exported="false" />
+        <activity
             android:name=".NavigationDrawerActivity"
             android:exported="false"
             android:label="@string/title_activity_navigation_drawer"

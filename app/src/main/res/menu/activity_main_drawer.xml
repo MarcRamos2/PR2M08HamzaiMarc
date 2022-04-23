@@ -17,11 +17,11 @@
             android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/menu_slideshow" />
         <item
-            android:id="@+id/setting"
+            android:id="@+id/nav_setting"
             android:icon="@android:drawable/ic_menu_manage"
             android:title="@string/setting" />
         <item
-            android:id="@+id/about"
+            android:id="@+id/nav_about"
             android:icon="@android:drawable/ic_dialog_info"
             android:title="@string/about" />
 

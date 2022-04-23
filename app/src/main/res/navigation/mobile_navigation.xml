@@ -22,4 +22,11 @@
         android:name="com.example.pr2_hamzaimarc.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/nav_setting"
+        android:name="com.example.pr2_hamzaimarc.SettingsActivity1"
+        android:label="@string/setting"
+        tools:layout="@layout/activity_settings1" />
+
 </navigation>
