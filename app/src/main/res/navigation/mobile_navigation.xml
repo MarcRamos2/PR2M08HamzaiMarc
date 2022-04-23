@@ -23,7 +23,7 @@
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
 
-    <fragment
+    <activity
         android:id="@+id/nav_setting"
         android:name="com.example.pr2_hamzaimarc.SettingsActivity1"
         android:label="@string/setting"
@@ -32,7 +32,7 @@
     <fragment
         android:id="@+id/nav_about"
         android:name="com.example.pr2_hamzaimarc.AboutFragment"
-        android:label="@string/setting"
+        android:label="@string/about"
         tools:layout="@layout/fragment_about" />
 
 </navigation>
