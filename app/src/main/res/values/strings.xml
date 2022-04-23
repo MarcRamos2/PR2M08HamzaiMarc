@@ -21,4 +21,6 @@
     <string name="menu_gallery">Menu</string>
     <string name="menu_slideshow">Calendar</string>
     <string name="horari_servei">Customer Service Hours</string>
+    <string name="setting">Settings</string>
+    <string name="about">About</string>
 </resources>

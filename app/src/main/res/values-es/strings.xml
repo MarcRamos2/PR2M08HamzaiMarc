@@ -23,4 +23,6 @@
     <string name="nav_header_desc">Encabezado de navegación</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="horari_servei">Horario de servicio al cliente</string>
+    <string name="setting">Ajustes</string>
+    <string name="about">Acerca de</string>
 </resources>
