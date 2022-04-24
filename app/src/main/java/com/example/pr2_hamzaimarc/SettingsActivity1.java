@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 public class SettingsActivity1 extends AppCompatActivity {
 
@@ -20,7 +21,7 @@ public class SettingsActivity1 extends AppCompatActivity {
             new AlertDialog.Builder(SettingsActivity1.this)
                     .setItems(R.array.textSize, new DialogInterface.OnClickListener() {
                         @Override
-                        public void onClick(DialogInterface dialogInterface, int which) {
+                        public void onClick(DialogInterface dialog, int which) {
                             if (which == 0) {
                                 TextView tv2 = (TextView) findViewById(R.id.A);
                                 tv2.setTextSize(14);
@@ -48,6 +49,53 @@ public class SettingsActivity1 extends AppCompatActivity {
                         }
                     }).create().show();
         });
+
+
+        TextView colorFons = (TextView) findViewById(R.id.B);
+        colorFons.setOnClickListener((v) ->
+        {
+            new AlertDialog.Builder(SettingsActivity1.this)
+                    .setItems(R.array.theme, new DialogInterface.OnClickListener()
+                    {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which)
+                        {
+                            if(which == 0){
+                                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                            }
+                            else if(which == 1){
+                                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                            }
+                        }
+
+                    }).create().show();
+
+        });
+
+
+        TextView canviNom = (TextView) findViewById(R.id.C);
+        canviNom.setOnClickListener((v) ->
+        {
+            new AlertDialog.Builder(SettingsActivity1.this)
+                    .setItems(R.array.theme, new DialogInterface.OnClickListener()
+                    {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int which)
+                        {
+                            if(which == 0){
+                                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                            }
+                            else if(which == 1){
+                                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                            }
+                        }
+                    }).create().show();
+        });
+
+
+
+
+
     }
 }
 

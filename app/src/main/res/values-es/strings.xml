@@ -35,4 +35,9 @@
         <item>  Grande </item>
     </string-array>
 
+    <string-array name="theme">
+        <item> Oscuro </item>
+        <item> Claro </item>
+    </string-array>
+
 </resources>
