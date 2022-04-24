@@ -29,10 +29,13 @@ import com.example.pr2_hamzaimarc.ui.login.LoginViewModel;
 import com.example.pr2_hamzaimarc.ui.login.LoginViewModelFactory;
 import com.example.pr2_hamzaimarc.databinding.ActivityLoginBinding;
 
+import org.w3c.dom.Text;
+
 public class LoginActivity extends AppCompatActivity {
 
     private LoginViewModel loginViewModel;
     private ActivityLoginBinding binding;
+    public static final String EXTRA_NAME = "user";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -122,14 +125,18 @@ public class LoginActivity extends AppCompatActivity {
                /* loadingProgressBar.setVisibility(View.VISIBLE);
                 loginViewModel.login(usernameEditText.getText().toString(),
                         passwordEditText.getText().toString());*/
+                Intent View = new Intent(LoginActivity.this,NavigationDrawerActivity.class);
+                TextView usuari = (TextView) findViewById(R.id.username);
 
-                String user = ((EditText)findViewById(R.id.username)).getText().toString();
+                String user = usuari.getText().toString();
+
+
                 String password = ((EditText)findViewById(R.id.password)).getText().toString();
 
 
                 if(user.length() >= 5 && password.length() >= 5){
-                    Intent View = new Intent(LoginActivity.this,NavigationDrawerActivity.class);
-                    View.putExtra("userPutExtra", user);
+
+                    View.putExtra("EXTRA_NAME", user);
                     startActivity(View);
                 }else{
                     Toast.makeText(getApplicationContext(),"Incorrect user or password", Toast.LENGTH_SHORT).show();

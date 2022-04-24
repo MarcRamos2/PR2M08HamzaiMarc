@@ -1,9 +1,11 @@
 package com.example.pr2_hamzaimarc;
 
 import android.app.AlertDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -13,6 +15,7 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.example.pr2_hamzaimarc.databinding.ActivityNavigationDrawerBinding;
+import com.example.pr2_hamzaimarc.ui.login.LoginActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 
@@ -31,6 +34,8 @@ public class NavigationDrawerActivity extends AppCompatActivity {
         setSupportActionBar(binding.appBarNavigationDrawer.toolbar);
 
         FloatingActionButton fabe = findViewById(R.id.fab);
+
+
 
         fabe.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,7 +62,12 @@ public class NavigationDrawerActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
+        Intent intent = getIntent();
         getMenuInflater().inflate(R.menu.navigation_drawer, menu);
+        String new_name = intent.getStringExtra(LoginActivity.EXTRA_NAME);
+        TextView err = (TextView)findViewById(R.id.textView);
+
+        err.setText(new_name);
         return true;
     }
 
