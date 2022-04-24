@@ -114,7 +114,7 @@ public class LoginActivity extends AppCompatActivity {
                 }
                 return false;
             }
-        });
+        }); 
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
