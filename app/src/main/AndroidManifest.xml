@@ -9,9 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PR2_HamzaiMarc">
-        <activity
-            android:name=".SettingsActivity1"
-            android:exported="false"  />
+
+        <activity android:name=".SettingsActivity1" android:parentActivityName=".NavigationDrawerActivity" />
+
         <activity
             android:name=".NavigationDrawerActivity"
             android:exported="false"
