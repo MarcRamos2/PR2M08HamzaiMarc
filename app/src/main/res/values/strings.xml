@@ -28,6 +28,7 @@
     <string name="A">Change Text Size</string>
     <string name="B">Change Background</string>
     <string name="C">Change User Name</string>
+    <string name="fasfus">FasFus</string>
 
     <string-array name="textSize">
         <item>  Small </item>
