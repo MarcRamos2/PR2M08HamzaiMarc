@@ -25,4 +25,14 @@
     <string name="horari_servei">Horario de servicio al cliente</string>
     <string name="setting">Ajustes</string>
     <string name="about">Acerca de</string>
+    <string name="A">Cambiar el tamño del texto</string>
+    <string name="B">Cambiar el fondo</string>
+    <string name="C">Cambiar el nombre del usuario</string>
+
+    <string-array name="textSize">
+        <item>  Pequeña </item>
+        <item>  Mediana </item>
+        <item>  Grande </item>
+    </string-array>
+
 </resources>
