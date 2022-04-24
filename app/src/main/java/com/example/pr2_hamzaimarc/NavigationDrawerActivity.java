@@ -1,5 +1,6 @@
 package com.example.pr2_hamzaimarc;
 
+import android.app.AlertDialog;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
@@ -12,8 +13,8 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.example.pr2_hamzaimarc.databinding.ActivityNavigationDrawerBinding;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
-import com.google.android.material.snackbar.Snackbar;
 
 public class NavigationDrawerActivity extends AppCompatActivity {
 
@@ -28,13 +29,18 @@ public class NavigationDrawerActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         setSupportActionBar(binding.appBarNavigationDrawer.toolbar);
-        binding.appBarNavigationDrawer.fab.setOnClickListener(new View.OnClickListener() {
+
+        FloatingActionButton fabe = findViewById(R.id.fab);
+
+        fabe.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+            public void onClick(View view)
+            {
+                new AlertDialog.Builder(NavigationDrawerActivity.this).setTitle("FasFus").setIcon(R.drawable.burgerr)
+                        .setMessage("Autor/es: Hamza i Marc").setMessage("2020").create().show();
             }
         });
+
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
         // Passing each menu ID as a set of Ids because each
