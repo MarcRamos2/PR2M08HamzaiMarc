@@ -11,7 +11,7 @@
         android:theme="@style/Theme.PR2_HamzaiMarc">
         <activity
             android:name=".SettingsActivity1"
-            android:exported="true"  />
+            android:exported="false"  />
         <activity
             android:name=".NavigationDrawerActivity"
             android:exported="false"
