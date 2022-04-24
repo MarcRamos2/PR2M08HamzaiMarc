@@ -8,6 +8,8 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 public class SettingsActivity1 extends AppCompatActivity {
 
     @Override
@@ -92,7 +94,11 @@ public class SettingsActivity1 extends AppCompatActivity {
                     }).create().show();
         });
 
-
+        FloatingActionButton fab = findViewById(R.id.fab2);
+        fab.setOnClickListener((view) -> {
+            new AlertDialog.Builder(SettingsActivity1.this).setTitle("FasFus").setIcon(R.drawable.burgerr)
+                    .setMessage("Autor/es: Hamza i Marc").create().show();
+        });
 
 
 
