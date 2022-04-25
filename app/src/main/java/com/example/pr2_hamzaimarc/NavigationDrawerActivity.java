@@ -62,12 +62,19 @@ public class NavigationDrawerActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        Intent intent = getIntent();
-        getMenuInflater().inflate(R.menu.navigation_drawer, menu);
-        String new_name = intent.getStringExtra(LoginActivity.EXTRA_NAME);
-        TextView err = (TextView)findViewById(R.id.textView);
 
-        err.setText(new_name);
+        Intent intent = getIntent();
+
+        //String new_name = intent.getStringExtra(LoginActivity.EXTRA_NAME);
+
+        TextView err = (TextView)findViewById(R.id.usuarioaqui);
+
+
+        err.setText(intent.getStringExtra("EXTRA_NAME"));
+
+
+
+        getMenuInflater().inflate(R.menu.navigation_drawer, menu);
         return true;
     }
 
@@ -76,5 +83,7 @@ public class NavigationDrawerActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_navigation_drawer);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
+
+
     }
 }
