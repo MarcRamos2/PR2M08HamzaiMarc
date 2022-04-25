@@ -12,13 +12,16 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
+import com.example.pr2_hamzaimarc.ui.login.LoginActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import java.util.jar.Attributes;
 
 public class SettingsActivity1 extends AppCompatActivity {
 
     EditText editText;
     Button button;
-    public static final String EXTRA = "Name";
+    public static final String EXTRA_NAME = "user";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,9 +36,13 @@ public class SettingsActivity1 extends AppCompatActivity {
             public void onClick(View v) {
 
                 Intent View = new Intent(SettingsActivity1.this,NavigationDrawerActivity.class);
-                TextView usuari = (TextView) findViewById(R.id.settingUser);
-                String user = usuari.getText().toString();
-                View.putExtra("EXTRA", user);
+                TextView usuario = (TextView) findViewById(R.id.settingUser);
+                String user = usuario.getText().toString();
+
+
+
+
+                View.putExtra("EXTRA_NAME", user);
                 startActivity(View);
             }
         });

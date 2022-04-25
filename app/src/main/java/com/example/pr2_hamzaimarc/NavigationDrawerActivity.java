@@ -63,7 +63,8 @@ public class NavigationDrawerActivity extends AppCompatActivity {
         Intent intent = getIntent();
         //String new_name = intent.getStringExtra(LoginActivity.EXTRA_NAME);
         TextView err = (TextView)findViewById(R.id.usuarioaqui);
-        err.setText(intent.getStringExtra("EXTRA"));
+        err.setText(intent.getStringExtra("EXTRA_NAME"));
+
 
         getMenuInflater().inflate(R.menu.navigation_drawer, menu);
         return true;
