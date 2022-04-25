@@ -41,5 +41,6 @@
         <item> Clar </item>
     </string-array>
     <string name="Welcome">Welcome to the Fasfus page. Start session to continue.</string>
+    <string name="save">Save</string>
 
 </resources>
