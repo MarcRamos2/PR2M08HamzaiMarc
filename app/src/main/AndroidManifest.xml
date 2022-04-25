@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PR2_HamzaiMarc">
 
-        <activity android:name=".SettingsActivity1" android:parentActivityName=".NavigationDrawerActivity" />
+        <activity android:label="@string/setting" android:name=".SettingsActivity1" android:parentActivityName=".NavigationDrawerActivity" />
 
         <activity
             android:name=".NavigationDrawerActivity"
