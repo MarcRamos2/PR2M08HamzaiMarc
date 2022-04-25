@@ -12,10 +12,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
-import com.example.pr2_hamzaimarc.ui.login.LoginActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-
-import java.util.jar.Attributes;
 
 public class SettingsActivity1 extends AppCompatActivity {
 
@@ -38,10 +35,6 @@ public class SettingsActivity1 extends AppCompatActivity {
                 Intent View = new Intent(SettingsActivity1.this,NavigationDrawerActivity.class);
                 TextView usuario = (TextView) findViewById(R.id.settingUser);
                 String user = usuario.getText().toString();
-
-
-
-
                 View.putExtra("EXTRA_NAME", user);
                 startActivity(View);
             }
@@ -104,25 +97,6 @@ public class SettingsActivity1 extends AppCompatActivity {
 
         });
 
-
-        TextView canviNom = (TextView) findViewById(R.id.C);
-        canviNom.setOnClickListener((v) ->
-        {
-            new AlertDialog.Builder(SettingsActivity1.this)
-                    .setItems(R.array.theme, new DialogInterface.OnClickListener()
-                    {
-                        @Override
-                        public void onClick(DialogInterface dialogInterface, int which)
-                        {
-                            if(which == 0){
-                                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-                            }
-                            else if(which == 1){
-                                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-                            }
-                        }
-                    }).create().show();
-        });
 
         FloatingActionButton fab = findViewById(R.id.fab2);
         fab.setOnClickListener((view) -> {
