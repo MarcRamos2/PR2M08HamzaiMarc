@@ -63,7 +63,7 @@ public class NavigationDrawerActivity extends AppCompatActivity {
         Intent intent = getIntent();
         //String new_name = intent.getStringExtra(LoginActivity.EXTRA_NAME);
         TextView err = (TextView)findViewById(R.id.usuarioaqui);
-        err.setText(intent.getStringExtra("EXTRA_NAME"));
+        err.setText(intent.getStringExtra("EXTRA"));
 
         getMenuInflater().inflate(R.menu.navigation_drawer, menu);
         return true;
@@ -74,7 +74,7 @@ public class NavigationDrawerActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_navigation_drawer);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
-
-
     }
+
+    
 }

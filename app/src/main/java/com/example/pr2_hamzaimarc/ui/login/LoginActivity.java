@@ -1,17 +1,8 @@
 package com.example.pr2_hamzaimarc.ui.login;
 
 import android.app.Activity;
-
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
-
 import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.annotation.Nullable;
-import androidx.annotation.StringRes;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.KeyEvent;
@@ -23,13 +14,15 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.Nullable;
+import androidx.annotation.StringRes;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
+
 import com.example.pr2_hamzaimarc.NavigationDrawerActivity;
 import com.example.pr2_hamzaimarc.R;
-import com.example.pr2_hamzaimarc.ui.login.LoginViewModel;
-import com.example.pr2_hamzaimarc.ui.login.LoginViewModelFactory;
 import com.example.pr2_hamzaimarc.databinding.ActivityLoginBinding;
-
-import org.w3c.dom.Text;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -132,7 +125,6 @@ public class LoginActivity extends AppCompatActivity {
                 String password = ((EditText)findViewById(R.id.password)).getText().toString();
 
                 if(user.length() >= 5 && password.length() >= 5){
-
                     View.putExtra("EXTRA_NAME", user);
                     startActivity(View);
                 }else{

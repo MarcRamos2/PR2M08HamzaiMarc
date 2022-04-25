@@ -2,7 +2,11 @@ package com.example.pr2_hamzaimarc;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,10 +16,29 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class SettingsActivity1 extends AppCompatActivity {
 
+    EditText editText;
+    Button button;
+    public static final String EXTRA = "Name";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings1);
+
+        editText = findViewById(R.id.settingUser);
+        button = findViewById(R.id.settingButton);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent View = new Intent(SettingsActivity1.this,NavigationDrawerActivity.class);
+                TextView usuari = (TextView) findViewById(R.id.settingUser);
+                String user = usuari.getText().toString();
+                View.putExtra("EXTRA", user);
+                startActivity(View);
+            }
+        });
 
         TextView midaText = (TextView) findViewById(R.id.A);
         midaText.setOnClickListener((v) ->
