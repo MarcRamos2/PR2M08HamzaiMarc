@@ -129,10 +129,7 @@ public class LoginActivity extends AppCompatActivity {
                 TextView usuari = (TextView) findViewById(R.id.username);
 
                 String user = usuari.getText().toString();
-
-
                 String password = ((EditText)findViewById(R.id.password)).getText().toString();
-
 
                 if(user.length() >= 5 && password.length() >= 5){
 
