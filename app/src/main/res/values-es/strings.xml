@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">PR2_HamzaiMarc</string>
-    <string name="prompt_email">Gmail</string>
+    <string name="prompt_email">Email</string>
     <string name="prompt_password">Contraseña</string>
     <string name="action_sign_in">Iniciar sesión o registrarse</string>
     <string name="action_sign_in_short">Iniciar sesión</string>
@@ -39,5 +39,7 @@
         <item> Oscuro </item>
         <item> Claro </item>
     </string-array>
+    <string name="fasfus">FasFus</string>
+    <string name="Welcome">Bienvenido a la página de Fasfus. Inicie la sesión para continuar.</string>
 
 </resources>

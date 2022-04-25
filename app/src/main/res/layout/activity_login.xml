@@ -99,7 +99,7 @@
         android:layout_height="wrap_content"
         android:background="@android:color/holo_orange_light"
         android:fontFamily="@font/alfa_slab_one"
-        android:text="Welcome to the Fasfus page. Start session to continue."
+        android:text="@string/Welcome"
         android:textColor="#221D1D"
         android:textSize="25sp"
         app:layout_constraintBottom_toTopOf="@+id/username"
