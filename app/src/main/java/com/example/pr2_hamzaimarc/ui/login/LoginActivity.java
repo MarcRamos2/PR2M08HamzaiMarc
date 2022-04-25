@@ -24,6 +24,9 @@ import com.example.pr2_hamzaimarc.NavigationDrawerActivity;
 import com.example.pr2_hamzaimarc.R;
 import com.example.pr2_hamzaimarc.databinding.ActivityLoginBinding;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class LoginActivity extends AppCompatActivity {
 
     private LoginViewModel loginViewModel;
@@ -116,39 +119,39 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-            final EditText emailValidate = (EditText)findViewById(R.id.username);
-            String email = emailValidate.getText().toString().trim();
-            String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+                boolean isValid = false;
 
-            Intent View = new Intent(LoginActivity.this,NavigationDrawerActivity.class);
-            TextView usuari = (TextView) findViewById(R.id.username);
+                Intent View = new Intent(LoginActivity.this,NavigationDrawerActivity.class);
+                TextView usuari = (TextView) findViewById(R.id.username);
+                String user = usuari.getText().toString();
+                String password = ((EditText)findViewById(R.id.password)).getText().toString();
 
-            String user = usuari.getText().toString();
-            String password = ((EditText)findViewById(R.id.password)).getText().toString();
+                isValid = isEmailValid(user);
+                if( isValid == true && user.length() >= 5 && password.length() >= 5){
+                    Toast.makeText(getApplicationContext(),"Valid email address", Toast.LENGTH_SHORT).show();
+                    View.putExtra("EXTRA_NAME", user);
+                    startActivity(View);
+                }else{
+                    Toast.makeText(getApplicationContext(),"Incorrect user or password", Toast.LENGTH_SHORT).show();
 
-            emailValidate .addTextChangedListener(new TextWatcher() {
-                public void afterTextChanged(Editable s) {
-                    if (email.matches(emailPattern) && user.length() >= 5 && password.length() >= 5)
-                    {
-                        Toast.makeText(getApplicationContext(),"valid email address",Toast.LENGTH_SHORT).show();
-                        View.putExtra("EXTRA_NAME", user);
-                        startActivity(View);
-                    }
-                    else
-                    {
-                        Toast.makeText(getApplicationContext(),"Invalid email address",Toast.LENGTH_SHORT).show();
-                    }
                 }
-                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-                    // other stuffs
-                }
-                public void onTextChanged(CharSequence s, int start, int before, int count) {
-                    // other stuffs
-                }
-            });
 
             }
         });
+    }
+
+    public static boolean isEmailValid(String email) {
+        boolean isValid = false;
+
+        String expression = "^[\\w\\.-]+@([\\w\\-]+\\.)+[A-Z]{2,4}$";
+        CharSequence inputStr = email;
+
+        Pattern pattern = Pattern.compile(expression, Pattern.CASE_INSENSITIVE);
+        Matcher matcher = pattern.matcher(inputStr);
+        if (matcher.matches()) {
+            isValid = true;
+        }
+        return isValid;
     }
 
     private void updateUiWithUser(LoggedInUserView model) {
