@@ -115,22 +115,37 @@ public class LoginActivity extends AppCompatActivity {
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               /** loadingProgressBar.setVisibility(View.VISIBLE);
-                loginViewModel.login(usernameEditText.getText().toString(),
-                        passwordEditText.getText().toString());*/
-                Intent View = new Intent(LoginActivity.this,NavigationDrawerActivity.class);
-                TextView usuari = (TextView) findViewById(R.id.username);
 
-                String user = usuari.getText().toString();
-                String password = ((EditText)findViewById(R.id.password)).getText().toString();
+            final EditText emailValidate = (EditText)findViewById(R.id.username);
+            String email = emailValidate.getText().toString().trim();
+            String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
 
-                if(user.length() >= 5 && password.length() >= 5){
-                    View.putExtra("EXTRA_NAME", user);
-                    startActivity(View);
-                }else{
-                    Toast.makeText(getApplicationContext(),"Incorrect user or password", Toast.LENGTH_SHORT).show();
+            Intent View = new Intent(LoginActivity.this,NavigationDrawerActivity.class);
+            TextView usuari = (TextView) findViewById(R.id.username);
 
+            String user = usuari.getText().toString();
+            String password = ((EditText)findViewById(R.id.password)).getText().toString();
+
+            emailValidate .addTextChangedListener(new TextWatcher() {
+                public void afterTextChanged(Editable s) {
+                    if (email.matches(emailPattern) && user.length() >= 5 && password.length() >= 5)
+                    {
+                        Toast.makeText(getApplicationContext(),"valid email address",Toast.LENGTH_SHORT).show();
+                        View.putExtra("EXTRA_NAME", user);
+                        startActivity(View);
+                    }
+                    else
+                    {
+                        Toast.makeText(getApplicationContext(),"Invalid email address",Toast.LENGTH_SHORT).show();
+                    }
                 }
+                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                    // other stuffs
+                }
+                public void onTextChanged(CharSequence s, int start, int before, int count) {
+                    // other stuffs
+                }
+            });
 
             }
         });

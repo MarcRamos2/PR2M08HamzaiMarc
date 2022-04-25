@@ -39,7 +39,7 @@
         <item> Oscuro </item>
         <item> Claro </item>
     </string-array>
-    
+
     <string name="fasfus">FasFus</string>
     <string name="Welcome">Bienvenido a la página de Fasfus. Inicie la sesión para continuar.</string>
     <string name="save">Guardar</string>
