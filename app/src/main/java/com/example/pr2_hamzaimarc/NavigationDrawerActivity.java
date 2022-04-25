@@ -61,9 +61,7 @@ public class NavigationDrawerActivity extends AppCompatActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
 
         Intent intent = getIntent();
-
         //String new_name = intent.getStringExtra(LoginActivity.EXTRA_NAME);
-
         TextView err = (TextView)findViewById(R.id.usuarioaqui);
         err.setText(intent.getStringExtra("EXTRA_NAME"));
 
