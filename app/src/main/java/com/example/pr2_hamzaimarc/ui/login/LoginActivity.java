@@ -126,11 +126,14 @@ public class LoginActivity extends AppCompatActivity {
                 String user = usuari.getText().toString();
                 String password = ((EditText)findViewById(R.id.password)).getText().toString();
 
-                isValid = isEmailValid(user);
+                isValid = isEmailValid(user); // Validem el gmail
+                // Si es valid i té més de 5 caracters tan el gmail com la passwd inciem l'activity
                 if( isValid == true && user.length() >= 5 && password.length() >= 5){
                     Toast.makeText(getApplicationContext(),"Valid email address", Toast.LENGTH_SHORT).show();
                     View.putExtra("EXTRA_NAME", user);
                     startActivity(View);
+
+                    // Error
                 }else{
                     Toast.makeText(getApplicationContext(),"Incorrect user or password", Toast.LENGTH_SHORT).show();
 
