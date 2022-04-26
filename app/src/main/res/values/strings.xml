@@ -40,7 +40,47 @@
         <item> Fosc </item>
         <item> Clar </item>
     </string-array>
+
+    <string-array name="Menu_Names">
+        <item> Burger1 </item>
+        <item> Burger2 </item>
+        <item> Burger3 </item>
+        <item> Burger4 </item>
+        <item> Burger5 </item>
+        <item> Burger6 </item>
+        <item> Burger7 </item>
+        <item> Burger8 </item>
+        <item> Burger9 </item>
+        <item> Burger10 </item>
+        <item> Burger11 </item>
+        <item> Burger12 </item>
+        <item> Burger13 </item>
+        <item> Burger14 </item>
+        <item> Burger15 </item>
+    </string-array>
+
+    <string-array name="Description">
+        <item> This is random Description </item>
+        <item> This is random Description </item>
+        <item> This is random Description </item>
+        <item> This is random Description </item>
+        <item> This is random Description </item>
+        <item> This is random Description </item>
+        <item> This is random Description </item>
+        <item> This is random Description </item>
+        <item> This is random Description </item>
+        <item> This is random Description </item>
+        <item> This is random Description </item>
+        <item> This is random Description </item>
+        <item> This is random Description </item>
+        <item> This is random Description </item>
+        <item> This is random Description </item>
+    </string-array>
+
     <string name="Welcome">Welcome to the Fasfus page. Start session to continue.</string>
     <string name="save">Save</string>
+    <string name="username">Username</string>
+    <string name="about_info">Based in Spain since 2020, Fasfus Spain has more than 483 restaurants spread throughout the Spanish geography that generate some 23,000 direct jobs.</string>
+    <string name="about_info2">Our history and Our values FasFus has four basic principles that characterize its business philosophy: Quality, Service, Cleanliness and Value or Affordability.</string>
 
 </resources>

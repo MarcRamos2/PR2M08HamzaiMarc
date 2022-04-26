@@ -43,5 +43,8 @@
     <string name="fasfus">FasFus</string>
     <string name="Welcome">Bienvenido a la página de Fasfus. Inicie la sesión para continuar.</string>
     <string name="save">Guardar</string>
+    <string name="username">Nombre de usuario</string>
+    <string name="about_info">Con sede en España desde 1981, FasFus España cuenta con más de 483 restaurantes repartidos por toda la geografía española que generan unos 23.000 empleos directos.</string>
+    <string name="about_info2">Nuestra historia y Nuestros valores FasFus cuenta con cuatro principios básicos que caracterizan su filosofía empresarial: Calidad, Servicio, Limpieza y Valor o Asequibilidad.</string>
 
 </resources>

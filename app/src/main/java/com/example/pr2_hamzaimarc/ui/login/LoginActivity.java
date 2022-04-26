@@ -143,6 +143,7 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
+    // Validar el correu electrònic
     public static boolean isEmailValid(String email) {
         boolean isValid = false;
 
