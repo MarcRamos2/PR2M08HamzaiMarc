@@ -39,7 +39,7 @@ public class NavigationDrawerActivity extends AppCompatActivity {
             public void onClick(View view)
             {
                 new AlertDialog.Builder(NavigationDrawerActivity.this).setTitle("FasFus").setIcon(R.drawable.burgerr)
-                        .setMessage("Autor/es: Hamza i Marc (2020)").create().show();
+                        .setMessage("Autor/es: Hamza i Marc (2022)").create().show();
             }
         });
 
