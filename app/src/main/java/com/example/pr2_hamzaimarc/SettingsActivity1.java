@@ -47,32 +47,32 @@ public class SettingsActivity1 extends AppCompatActivity {
         midaText.setOnClickListener((v) -> // fer que es pugui click sobre el textview
         {
             new AlertDialog.Builder(SettingsActivity1.this) //obrim un alert Dialog i li posem els items que tenim en l'array
-                    .setItems(R.array.textSize, new DialogInterface.OnClickListener() {
+                    .setItems(R.array.tamany, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int opcio) { //fem el mètode onclick per saber quina opció ha escollit
                             if (opcio == 0) {
                                 TextView tv2 = (TextView) findViewById(R.id.A);
-                                tv2.setTextSize(14); // un setTextSize per canviar la mida
+                                tv2.setTextSize(15); // un setTextSize per canviar la mida
                                 TextView tv3 = (TextView) findViewById(R.id.B);
-                                tv3.setTextSize(14);
+                                tv3.setTextSize(15);
                                 TextView tv1 = (TextView) findViewById(R.id.C);
-                                tv1.setTextSize(14);
+                                tv1.setTextSize(15);
 
                             } else if (opcio == 1) {
                                 TextView tv2 = (TextView) findViewById(R.id.A);
-                                tv2.setTextSize(18);
+                                tv2.setTextSize(19);
                                 TextView tv3 = (TextView) findViewById(R.id.B);
-                                tv3.setTextSize(18);
+                                tv3.setTextSize(19);
                                 TextView tv1 = (TextView) findViewById(R.id.C);
-                                tv1.setTextSize(18);
+                                tv1.setTextSize(19);
 
                             } else if (opcio == 2) {
                                 TextView tv2 = (TextView) findViewById(R.id.A);
-                                tv2.setTextSize(22);
+                                tv2.setTextSize(23);
                                 TextView tv3 = (TextView) findViewById(R.id.B);
-                                tv3.setTextSize(22);
+                                tv3.setTextSize(23);
                                 TextView tv1 = (TextView) findViewById(R.id.C);
-                                tv1.setTextSize(22);
+                                tv1.setTextSize(23);
                             }
                         }
                     }).create().show();
@@ -85,7 +85,7 @@ public class SettingsActivity1 extends AppCompatActivity {
         colorFons.setOnClickListener((v) ->
         {
             new AlertDialog.Builder(SettingsActivity1.this)
-                    .setItems(R.array.theme, new DialogInterface.OnClickListener()
+                    .setItems(R.array.fons, new DialogInterface.OnClickListener()
                     {
                         @Override
                         public void onClick(DialogInterface dialog, int opcio)

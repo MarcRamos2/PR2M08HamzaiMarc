@@ -29,13 +29,13 @@
     <string name="B">Cambiar el fondo</string>
     <string name="C">Cambiar el nombre del usuario</string>
 
-    <string-array name="textSize">
+    <string-array name="tamany">
         <item>  Pequeña </item>
         <item>  Mediana </item>
         <item>  Grande </item>
     </string-array>
 
-    <string-array name="theme">
+    <string-array name="fons">
         <item> Oscuro </item>
         <item> Claro </item>
     </string-array>
